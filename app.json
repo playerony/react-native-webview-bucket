@@ -1,29 +1,40 @@
 {
-  "expo": {
-    "name": "react-native-webview-bucket",
-    "slug": "react-native-webview-bucket",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
-  }
+	"expo": {
+		"name": "react-native-webview-bucket",
+		"slug": "react-native-webview-bucket",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./assets/icon.png",
+		"userInterfaceStyle": "light",
+		"scheme": "webviewbucket",
+		"newArchEnabled": true,
+		"splash": {
+			"image": "./assets/splash-icon.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#ffffff"
+		},
+		"ios": {
+			"supportsTablet": true,
+			"bundleIdentifier": "com.webviewbucket.app",
+			"infoPlist": {
+				"NSCameraUsageDescription": "Allow camera to upload photos and scan within the calendar.",
+				"NSPhotoLibraryUsageDescription": "Allow photo access to upload images and attachments.",
+				"NSMicrophoneUsageDescription": "Allow microphone for any in-app recording within the website.",
+				"LSApplicationQueriesSchemes": ["tel", "mailto", "sms"]
+			}
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/adaptive-icon.png",
+				"backgroundColor": "#ffffff"
+			},
+			"edgeToEdgeEnabled": true,
+			"package": "com.webviewbucket.app",
+			"permissions": ["INTERNET", "CAMERA", "READ_MEDIA_IMAGES"]
+		},
+		"web": {
+			"favicon": "./assets/favicon.png"
+		},
+		"plugins": ["expo-web-browser"]
+	}
 }

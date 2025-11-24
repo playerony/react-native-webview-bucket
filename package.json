@@ -1,18 +1,35 @@
 {
-  "name": "react-native-webview-bucket",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
-  },
-  "dependencies": {
-    "expo": "~54.0.25",
-    "expo-status-bar": "~3.0.8",
-    "react": "19.1.0",
-    "react-native": "0.81.5"
-  },
-  "private": true
+	"name": "react-native-webview-bucket",
+	"version": "1.0.0",
+	"main": "index.js",
+	"engines": {
+		"node": ">=22",
+		"yarn": ">=1.22.0"
+	},
+	"scripts": {
+		"start": "expo start",
+		"android": "expo start --android",
+		"ios": "expo start --ios",
+		"web": "expo start --web",
+		"format": "npx @biomejs/biome format --write",
+		"lint": "npx @biomejs/biome lint --write",
+		"check": "npx @biomejs/biome check --write"
+	},
+	"dependencies": {
+		"@react-native-async-storage/async-storage": "2.2.0",
+		"@react-native-community/netinfo": "11.4.1",
+		"expo": "~54.0.25",
+		"expo-device": "~8.0.9",
+		"expo-splash-screen": "~31.0.11",
+		"expo-status-bar": "~3.0.8",
+		"expo-web-browser": "~15.0.9",
+		"react": "19.1.0",
+		"react-native": "0.81.5",
+		"react-native-safe-area-context": "~5.6.0",
+		"react-native-webview": "13.15.0"
+	},
+	"private": true,
+	"devDependencies": {
+		"@biomejs/biome": "^2.3.7"
+	}
 }
