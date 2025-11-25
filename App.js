@@ -1,7 +1,14 @@
 import { useRef, useEffect, useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import * as SplashScreen from "expo-splash-screen";
-import { BackHandler, StyleSheet, View, Text, Platform, Linking } from "react-native";
+import {
+	BackHandler,
+	StyleSheet,
+	View,
+	Text,
+	Platform,
+	Linking,
+} from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { WebView } from "react-native-webview";
 import * as WebBrowser from "expo-web-browser";
@@ -66,7 +73,8 @@ export default function App() {
 						source={{ uri: WEBSITE_URL }}
 						allowsBackForwardNavigationGestures
 						onShouldStartLoadWithRequest={({ url, navigationType }) => {
-							if (navigationType === 'other' || url.includes(BASE_WEBSITE_URL)) return true;
+							if (navigationType === "other" || url.includes(BASE_WEBSITE_URL))
+								return true;
 							WebBrowser.openBrowserAsync(url);
 							return false;
 						}}
